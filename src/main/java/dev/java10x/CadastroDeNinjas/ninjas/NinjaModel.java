@@ -1,6 +1,9 @@
-package dev.java10x.CadastroDeNinjas;
+package dev.java10x.CadastroDeNinjas.ninjas;
 
+import dev.java10x.CadastroDeNinjas.missoes.MissoesModel;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 //ENTITY transforma uma classe em uma entidade do banco de dados
 @Entity //essa anotacao cria uma tabela com todos os atributos dessa classe
@@ -14,6 +17,10 @@ public class NinjaModel {
     private String nome;
     private String email;
     private int idade;
+    @ManyToOne //@ManyToOne = um ninja so pode ser atribuido a uma unica missao
+    @JoinColumn(name = "missoes_id") //Foreign Key/Chave Estrangeira, JoinColumn é a fusao da tabela cadastro de missoes com cadastro de ninja
+    private MissoesModel missoes;
+
 
     public NinjaModel(long id, String nome, String email, int idade) {
         this.id = id;
