@@ -20,7 +20,7 @@ public class NinjaModel {
 
     @Id //essa anotacao indica que o proximo atributo (private long id) é o ID
     @GeneratedValue(strategy = GenerationType.IDENTITY) // essa anotacao indica que o id seguira uma numeracao sequencial
-    private long id;
+    private Long id;
 
     private String nome;
 

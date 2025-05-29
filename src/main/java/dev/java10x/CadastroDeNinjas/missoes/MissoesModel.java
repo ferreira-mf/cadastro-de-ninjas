@@ -19,7 +19,7 @@ public class MissoesModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     private String nome;
     private String dificuldade;
     @OneToMany(mappedBy = "missoes") //OneToMany uma missao pode ser atribuida a varios ninjas (esta sendo mapeado pela coluna que queremos ligar, no caso missoes)
