@@ -22,11 +22,13 @@ public class NinjaModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY) // essa anotacao indica que o id seguira uma numeracao sequencial
     private Long id;
 
+    @Column(name = "nome")
     private String nome;
 
     @Column(unique = true) //essa anotacao indica que essa coluna (coluna de email) é unica, sendo assim nao pode ter 2 emails iguais
     private String email;
 
+    @Column(name = "idade")
     private int idade;
 
     @ManyToOne //@ManyToOne = um ninja so pode ser atribuido a uma unica missao
